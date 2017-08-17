@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<extension key="civicrm-inky-mail" type="module">
-  <file>civicrm_inky_mail</file>
+<extension key="civicrm-inky-compose" type="module">
+  <file>civicrm_inky_compose</file>
   <name>Create an email using Inky and pug</name>
   <description>Adds an option to the CiviMail interface that allows you to upload inky and pug based email templates</description>
   <license>AGPL-3.0</license>

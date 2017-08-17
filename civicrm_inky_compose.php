@@ -1,14 +1,14 @@
 <?php
 
-require_once 'civicrm_inky_mail.civix.php';
+require_once 'civicrm_inky_compose.civix.php';
 
 /**
  * Implements hook_civicrm_config().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_config
  */
-function civicrm_inky_mail_civicrm_config(&$config) {
-  _civicrm_inky_mail_civix_civicrm_config($config);
+function civicrm_inky_compose_civicrm_config(&$config) {
+  _civicrm_inky_compose_civix_civicrm_config($config);
 }
 
 /**
@@ -16,8 +16,8 @@ function civicrm_inky_mail_civicrm_config(&$config) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_xmlMenu
  */
-function civicrm_inky_mail_civicrm_xmlMenu(&$files) {
-  _civicrm_inky_mail_civix_civicrm_xmlMenu($files);
+function civicrm_inky_compose_civicrm_xmlMenu(&$files) {
+  _civicrm_inky_compose_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -25,8 +25,8 @@ function civicrm_inky_mail_civicrm_xmlMenu(&$files) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_install
  */
-function civicrm_inky_mail_civicrm_install() {
-  _civicrm_inky_mail_civix_civicrm_install();
+function civicrm_inky_compose_civicrm_install() {
+  _civicrm_inky_compose_civix_civicrm_install();
 }
 
 /**
@@ -34,8 +34,8 @@ function civicrm_inky_mail_civicrm_install() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_postInstall
  */
-function civicrm_inky_mail_civicrm_postInstall() {
-  _civicrm_inky_mail_civix_civicrm_postInstall();
+function civicrm_inky_compose_civicrm_postInstall() {
+  _civicrm_inky_compose_civix_civicrm_postInstall();
 }
 
 /**
@@ -43,8 +43,8 @@ function civicrm_inky_mail_civicrm_postInstall() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_uninstall
  */
-function civicrm_inky_mail_civicrm_uninstall() {
-  _civicrm_inky_mail_civix_civicrm_uninstall();
+function civicrm_inky_compose_civicrm_uninstall() {
+  _civicrm_inky_compose_civix_civicrm_uninstall();
 }
 
 /**
@@ -52,8 +52,8 @@ function civicrm_inky_mail_civicrm_uninstall() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
-function civicrm_inky_mail_civicrm_enable() {
-  _civicrm_inky_mail_civix_civicrm_enable();
+function civicrm_inky_compose_civicrm_enable() {
+  _civicrm_inky_compose_civix_civicrm_enable();
 }
 
 /**
@@ -61,8 +61,8 @@ function civicrm_inky_mail_civicrm_enable() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
  */
-function civicrm_inky_mail_civicrm_disable() {
-  _civicrm_inky_mail_civix_civicrm_disable();
+function civicrm_inky_compose_civicrm_disable() {
+  _civicrm_inky_compose_civix_civicrm_disable();
 }
 
 /**
@@ -70,8 +70,8 @@ function civicrm_inky_mail_civicrm_disable() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_upgrade
  */
-function civicrm_inky_mail_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _civicrm_inky_mail_civix_civicrm_upgrade($op, $queue);
+function civicrm_inky_compose_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
+  return _civicrm_inky_compose_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -82,8 +82,8 @@ function civicrm_inky_mail_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_managed
  */
-function civicrm_inky_mail_civicrm_managed(&$entities) {
-  _civicrm_inky_mail_civix_civicrm_managed($entities);
+function civicrm_inky_compose_civicrm_managed(&$entities) {
+  _civicrm_inky_compose_civix_civicrm_managed($entities);
 }
 
 /**
@@ -96,8 +96,8 @@ function civicrm_inky_mail_civicrm_managed(&$entities) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
  */
-function civicrm_inky_mail_civicrm_angularModules(&$angularModules) {
-  _civicrm_inky_mail_civix_civicrm_angularModules($angularModules);
+function civicrm_inky_compose_civicrm_angularModules(&$angularModules) {
+  _civicrm_inky_compose_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -105,6 +105,6 @@ function civicrm_inky_mail_civicrm_angularModules(&$angularModules) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_alterSettingsFolders
  */
-function civicrm_inky_mail_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _civicrm_inky_mail_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function civicrm_inky_compose_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
+  _civicrm_inky_compose_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
