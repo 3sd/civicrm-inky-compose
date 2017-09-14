@@ -9,7 +9,7 @@
   </div>
   <div class="clear"></div>
   <h3>CSS URL</h3>
-  <div><input ng-model="mailing.template_options.cssUrl"></div>
+  <div><input ng-model="mailing.template_options.cssUrl" ng-change="convert()" ng-model-options="{ debounce: 300 }"></div>
   <div class="clear"></div>
   </div>
 </div>
