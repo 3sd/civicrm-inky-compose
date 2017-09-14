@@ -1,0 +1,25 @@
+.crmMailing .inky-compose .col{
+  float: left;
+  width: 49%;
+  margin-right: 0.5em;
+}
+
+.inky-compose div.inky-compose,
+.inky-compose iframe{
+  height: 500px;
+  width: 100%;
+  font-family: monospace;
+  border: 1px solid grey;
+  background-color: #fff;
+  /*margin: 0.5em*/
+}
+
+.inky-compose input{
+  width: 30em;
+  margin: 0.5em
+}
+
+/* We are also restyling the preview box since it is not useful with this compose UI */
+.crmMailing .preview-popup, .crmMailing .preview-contact, .crmMailing .preview-group{
+  width: 48% !important;
+}

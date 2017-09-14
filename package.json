@@ -1,0 +1,34 @@
+{
+  "name": "civicrm-inky-compose",
+  "version": "0.1.0-dev",
+  "description": "Inky compose is a CiviCRM extension that allows you to compose emails using the Inky email templating language.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3sd/civicrm-inky-compose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3sd/civicrm-inky-compose/issues"
+  },
+  "homepage": "https://github.com/3sd/civicrm-inky-compose#readme",
+  "dependencies": {
+    "civinky": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+site_name: Inky Compose
+repo_url: https://github.com/3sd/civicrm-inky-compose
+theme: material
+
+pages:
+- Home: index.md
+- Getting started: getting-started.md
+- Developer notes: developer-notes.md
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - codehilite
+  - toc(permalink=true)
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tilde
+  - pymdownx.betterem
+  - pymdownx.mark

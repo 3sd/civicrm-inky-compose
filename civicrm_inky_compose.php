@@ -108,3 +108,17 @@ function civicrm_inky_compose_civicrm_angularModules(&$angularModules) {
 function civicrm_inky_compose_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
   _civicrm_inky_compose_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
+
+function civicrm_inky_compose_civicrm_alterAngular($angular){
+  $changeSet = \Civi\Angular\ChangeSet::create('inky_compose')
+    ->alterHtml('~/crmMailing/EditMailingCtrl/2step.html',
+      function (phpQueryObject $doc) {
+        $doc->find('div#tab-mailing div:nth-child(3), div#tab-mailing div:nth-child(4)')->remove();
+        $doc->find('div#tab-mailing')->append('<crm-mailing-inky-compose mailing="mailing"></crm-mailing-inky-compose>');
+    })
+    ->alterHtml('~/crmMailing/BlockPreview.html',
+      function (phpQueryObject $doc) {
+        $doc->find('.preview-popup')->remove();
+    });
+  $angular->add($changeSet);
+}
