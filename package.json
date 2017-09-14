@@ -1,7 +1,7 @@
 {
   "name": "civicrm-inky-compose",
-  "version": "0.1.0-dev",
-  "description": "Inky compose is a CiviCRM extension that allows you to compose emails using the Inky email templating language.",
+  "version": "0.1.0",
+  "description": "Use Inky and Pug in CiviMail",
   "main": "index.js",
   "directories": {
     "doc": "docs"

@@ -15,8 +15,7 @@
 }
 
 .inky-compose input{
-  width: 30em;
-  margin: 0.5em
+  width: 100%;
 }
 
 /* We are also restyling the preview box since it is not useful with this compose UI */

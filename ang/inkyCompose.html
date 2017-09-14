@@ -2,14 +2,14 @@
   <div class="col">
     <h3>Pug</h3>
     <div ui-ace="{ showGutter: false, useWrapMode: true, mode: 'jade', }" ng-model="mailing.template_options.pug" ng-change="convert()" ng-model-options="{ debounce: 500 }" class='inky-compose'></div>
+    <h3>CSS URL</h3>
+    <div><input ng-model="mailing.template_options.cssUrl" ng-change="getCss()" ng-model-options="{ debounce: 300 }"></div>
   </div>
   <div class="col">
     <h3>Preview</h3>
     <iframe srcdoc="{{ mailing.body_html }}"></iframe>
   </div>
   <div class="clear"></div>
-  <h3>CSS URL</h3>
-  <div><input ng-model="mailing.template_options.cssUrl" ng-change="getCss()" ng-model-options="{ debounce: 300 }"></div>
   <div class="clear"></div>
   </div>
 </div>
