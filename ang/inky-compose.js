@@ -4,6 +4,26 @@
 
   module.controller('InkyComposeController', function($scope, $sce, crmApi){
 
+    $scope.getCss = function(){
+      // console.log('being called')
+      if($scope.$parent.mailing.template_options.cssUrl){
+        // console.log('being called is')
+        $.get( $scope.$parent.mailing.template_options.cssUrl)
+        .done(function(css){
+          $scope.css = css
+        })
+        .fail(function(){
+          $scope.css = ''
+        })
+      }else{
+        $scope.css = ''
+      }
+    }
+
+    $scope.$watch('css', function(){
+      $scope.convert()
+    })
+
     function trustAndAddReplaceMethod(value){
       value = $sce.trustAsHtml(value)
 
@@ -17,24 +37,18 @@
     // TODO I suspect that there is a better way to initialise the template
     $scope.$parent.mailing.body_html = trustAndAddReplaceMethod($scope.$parent.mailing.body_html)
 
+
     $scope.convert = function(){
 
       try{
-        $.get( $scope.$parent.mailing.template_options.cssUrl, function( css ) {
-          CRM.civinky({pug: $scope.$parent.mailing.template_options.pug, css: css}).then(function(result){
-            console.log()
-            $scope.$parent.mailing.body_html = trustAndAddReplaceMethod(result)
-            s = new String();
-            $scope.$parent.mailing.body_html.replace = s.replace
-            // $scope.$parent.mailing.body_html = 'This is safe and might be saved.'
-        })
-      });
-
-
+        CRM.civinky({pug: $scope.$parent.mailing.template_options.pug, css: $scope.css}).then(function(result){
+          $scope.$parent.mailing.body_html = trustAndAddReplaceMethod(result)
+        });
       }catch (e) {
         CRM.alert(e)
       }
     }
+    $scope.getCss()
     $scope.convert()
   })
 
