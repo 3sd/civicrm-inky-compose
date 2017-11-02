@@ -1,5 +1,4 @@
 <?php
-
 require_once 'civicrm_inky_compose.civix.php';
 
 /**
@@ -109,7 +108,7 @@ function civicrm_inky_compose_civicrm_alterSettingsFolders(&$metaDataFolders = N
   _civicrm_inky_compose_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
-function civicrm_inky_compose_civicrm_alterAngular($angular){
+function civicrm_inky_compose_civicrm_alterAngular($angular){ 
   $changeSet = \Civi\Angular\ChangeSet::create('inky_compose')
     ->alterHtml('~/crmMailing/EditMailingCtrl/2step.html',
       function (phpQueryObject $doc) {
@@ -121,4 +120,12 @@ function civicrm_inky_compose_civicrm_alterAngular($angular){
         $doc->find('.preview-popup')->remove();
     });
   $angular->add($changeSet);
+}
+
+function civicrm_inky_compose_civicrm_mailingTemplateTypes(&$types) {
+  $types[] = array(
+    'name' => 'inky',
+    'editorUrl' => '~/crmMailing/EditMailingCtrl/2step.html',
+    'weight' => -20,
+  );
 }
