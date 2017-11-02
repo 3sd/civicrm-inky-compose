@@ -123,6 +123,19 @@ function civicrm_inky_compose_civicrm_mailingTemplateTypes(&$types) {
   $types[] = array(
     'name' => 'inky',
     'editorUrl' => '~/crmMailing/EditMailingCtrl/2step.html',
-    'weight' => -2,
+    'weight' => -5,
   );
+}
+
+function civicrm_inky_compose_civicrm_navigationMenu(&$params) {
+  _civicrm_inky_compose_civix_insert_navigation_menu($params, 'Mailings', array(
+    'label' => ts('New Inky Mailing', array('domain' => 'civicrm-inky-compose')),
+    'name' => 'inky_mailing',
+    'permission' => 'access CiviMail,create mailings',
+    'child' => array(),
+    'operator' => 'OR',
+    'separator' => 0,
+    'url' => CRM_Utils_System::url('civicrm/a/', NULL, TRUE, '/mailing/new/inky'),
+  ));
+  _civicrm_inky_compose_civix_navigationMenu($params);
 }
