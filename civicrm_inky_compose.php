@@ -123,7 +123,7 @@ function civicrm_inky_compose_civicrm_mailingTemplateTypes(&$types) {
   $types[] = array(
     'name' => 'inky',
     'editorUrl' => '~/crmMailing/EditMailingCtrl/2step.html',
-    'weight' => -5,
+    'weight' => 10,
   );
 }
 
