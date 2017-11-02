@@ -17,8 +17,3 @@
 .inky-compose input{
   width: 100%;
 }
-
-/* We are also restyling the preview box since it is not useful with this compose UI */
-.crmMailing .preview-popup, .crmMailing .preview-contact, .crmMailing .preview-group{
-  width: 48% !important;
-}
