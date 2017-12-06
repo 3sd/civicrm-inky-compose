@@ -26,7 +26,8 @@
             $scope.$parent.mailing.body_html = trustAndAddReplaceMethod(result)
           });
         }catch (e) {
-          CRM.alert(e)
+          CRM.alert(e.message)
+          $scope.$parent.mailing.body_html = 'Sorry, we could not display your email. The error message was as follows:<br /><br />' + e.message
         }
       }
       $scope.convert()
