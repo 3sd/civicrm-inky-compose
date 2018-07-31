@@ -35,6 +35,10 @@ You may find the following references useful:
 * https://foundation.zurb.com/emails/docs/inky.html
 * https://pugjs.org/api/getting-started.html
 
+## Help
+
+If you have any questions regarding this extension that are not answered in this README or [in the documentation](docs), please check post a question on http://civicrm.stackexchange.com or contact info@thirdsectordesign.org.
+
 ## Developers
 
 Developers may be interested in the developer notes in the docs directory of this repository.
