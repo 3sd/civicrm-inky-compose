@@ -37,7 +37,7 @@ You may find the following references useful:
 
 ## Help
 
-If you have any questions regarding this extension that are not answered in this README [or in the documentation], please check post a question on http://civicrm.stackexchange.com or contact info@thirdsectordesign.org.
+If you have any questions regarding this extension that are not answered in this README or [in the documentation](docs), please check post a question on http://civicrm.stackexchange.com or contact info@thirdsectordesign.org.
 
 ## Developers
 
